@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaffou Tech - Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Balaffou Tech</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Demandez un service</h2>
+            <form id="serviceForm">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                
+                <label for="telephone">Téléphone :</label>
+                <input type="text" id="telephone" name="telephone" required>
+                
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required>
+                
+                <label for="probleme">Type de problème :</label>
+                <select id="probleme" name="probleme" required>
+                    <option value="software">Problème de software</option>
+                    <option value="hardware">Problème de hardware</option>
+                    <option value="installation">Installation de logiciel</option>
+                </select>
+                
+                <label for="description">Description du problème :</label>
+                <textarea id="description" name="description" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2025 Balaffou Tech. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
