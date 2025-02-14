@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balaffou Tech - Nous contacter</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
     <header>
-        <h1>Balaffou Tech</h1>
+    
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -22,14 +23,42 @@
     <main>
         <section>
             <h2>Nous contacter</h2>
+<<<<<<< HEAD
             <p>Pour toute demande, n'hésitez pas à nous contacter :</p>
             <p>Email : <a href="mailto:lamjed.balaffou@gmail.com">lamjed.balaffou@gmail.com</a></p>
+=======
+            <h4>Pour toute demande, n'hésitez pas à nous contacter :</h4>
+            <p>Contactez-nous par téléphone, par chat, par e-mail ou par d’autres moyens.</p>
+            <p>Email : <a href="lamjed.balaffou@gmail.com">lamjed.balaffou@gmail.com</a></p>
+>>>>>>> 8bfe453 (update)
             <p>Téléphone : +33759295889</p>
+        </section>
+        <section>
+            
+            <form id="serviceForm">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                
+                <label for="telephone">Téléphone :</label>
+                <input type="text" id="telephone" name="telephone" required>
+                
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required>
+                
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="email" required>
+                
+                <label for="description">Message :</label>
+                <textarea id="description" name="description" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
         </section>
     
     </main>
     <footer>
         <p>&copy; 2025 Balaffou Tech. Tous droits réservés.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -30,3 +30,8 @@ document.getElementById("serviceForm").addEventListener("submit", function (even
     alert("Formulaire envoyé avec succès !");
   
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("header");
+    header.style.opacity = "1";
+    header.style.transform = "translateY(0)";
+});

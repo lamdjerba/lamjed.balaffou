@@ -5,28 +5,81 @@ body {
     margin: 0;
     padding: 0;
 }
+ h1, h2, h3{
+
+    font-family:-apple-system , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight:600;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 2.5rem;
+    
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
 
 header {
     background-color: #0073e6;
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
+    width: 80%; /* Ajuste la largeur */
+    max-width: 800px; /* Largeur maximale */
+    margin: 20px auto; /* Centre le bloc */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour l'effet bloc */
+    
+    /* Animation d'apparition */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInHeader 1s ease-out forwards;
 }
+
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
+/* Style des liens sous forme de boutons */
 nav ul li a {
-    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #0073e6;
+    border: 2px solid #0073e6;
+    border-radius: 8px; 
     text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
+
+/* Effet au survol */
+nav ul li a:hover {
+    background-color: #0073e6;
+    color: white;
+    transform: scale(1.1); 
+}
+
 
 main {
     padding: 20px;
@@ -37,37 +90,113 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+/* Styles pour le formulaire */
+#serviceForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Réduire la largeur du formulaire */
+    margin: 0 auto; /* Centrer le formulaire */
+    width: 90%; /* Largeur relative pour s'adapter aux petits écrans */
 }
 
-form label {
-    margin-top: 10px;
+#serviceForm label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0073e6;
 }
 
-form input, form select, form textarea {
+#serviceForm input,
+#serviceForm select,
+#serviceForm textarea {
+    width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 14px; /* Réduire la taille de la police */
 }
 
-form button {
-    margin-top: 20px;
+#serviceForm textarea {
+    resize: vertical; /* Permettre le redimensionnement vertical uniquement */
+    height: 100px; /* Hauteur initiale */
+}
+
+#serviceForm button {
+    width: 100%;
     padding: 10px;
     background-color: #0073e6;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-form button:hover {
+#serviceForm button:hover {
     background-color: #005bb5;
+}
+/* j'ai ajouter une section image et de l,annimation*/
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.image-container:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.image-container:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.image-container:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-container img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0073e6;
 }
