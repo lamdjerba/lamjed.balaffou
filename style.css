@@ -200,3 +200,12 @@ footer {
     font-weight: bold;
     color: #0073e6;
 }
+/*ajustement de l'affichage*/
+.mobile {
+    font-size: 14px;
+    text-align: center;
+}
+
+.desktop {
+    font-size: 16px;
+}
