@@ -25,7 +25,7 @@ document.getElementById("serviceForm").addEventListener("submit", function (even
         alert("Veuillez décrire votre problème.");
         return;
     }
-
+  alert("Formulaire envoyé avec succès !");
   
 });
 
