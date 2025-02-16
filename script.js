@@ -14,7 +14,7 @@ document.getElementById("serviceForm").addEventListener("submit", function (even
     }
 
     // Validation du téléphone (peut commencer par + mais pas obligatoire, au moins 11 chiffres)
-    const telephoneRegex = /^\+?\d{11,}$/;
+    const telephoneRegex = /^\+?\d{10,}$/;
     if (!telephoneRegex.test(telephone)) {
         alert("Veuillez entrer un numéro de téléphone valide .");
         return;
@@ -26,8 +26,7 @@ document.getElementById("serviceForm").addEventListener("submit", function (even
         return;
     }
 
-    // Si tout est valide, on peut envoyer le formulaire
-    alert("Formulaire envoyé avec succès !");
+  
 });
 
 document.addEventListener("DOMContentLoaded", function () {
